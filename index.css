@@ -70,12 +70,18 @@ header nav.menu-desktop ul li{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background: rgb(74,222,221);
-    background: linear-gradient(90deg, rgba(74,222,221,1) 0%, rgba(74,222,221,1) 18%, rgba(255,255,255,1) 100%);
+    background: rgb(228,23,176);
+    background: linear-gradient(90deg, rgb(228, 23, 176) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
     color: #000;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
+}
+
+.btn-contato button:hover{
+    transform: scale(1.1);
+    transition-duration: .2s;
+    box-shadow: 0 0 20px 5px #f500c056; /*Sombra da seção de portfólio*/
 }
 
 h2.titulo {
@@ -166,6 +172,7 @@ section.topo-do-site{
 }
 
 section.topo-do-site .flex {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 90px;
@@ -184,7 +191,9 @@ section.topo-do-site .flex {
 
 .topo-do-site .txt-topo-do-site{
     margin-right: auto;
-}
+    flex-grow: 1;    /* permite crescer se necessário */
+    max-width: 500px; /* máximo que o texto pode ocupar */
+} 
 
 .topo-do-site .txt-topo-do-site p{
     color: #fff; /* Descrição logo abaixo da frase de impacto*/
@@ -200,8 +209,11 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-do-site img{
+    flex-shrink: 0; /* imagem não encolhe */
+    max-width: 300px; /* limita largura da imagem */
+    max-height: 300px;
     position: relative;
-    margin-right: 150px;
+    margin-right: 5em;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -230,7 +242,7 @@ section.topo-do-site .flex {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #fff; /*Cor das bolinhas de carregamento*/
   }
   
   .ball:nth-child(1) {
@@ -363,13 +375,13 @@ section.sobre .flex{
     color: #F50087; /*Span da descrição e dos textos de sobre nós*/
 }
 
-/*.sobre .txt-sobre*/ .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 0;
-    background-color: #4adedd;
-    color: #101728;
+    background-color: #F50087; /*cor do fundo dos botoes sociais*/
+    color: #000; /*cor dos emojis dos botoes sociais*/
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -380,7 +392,7 @@ section.sobre .flex{
 
 section.portfolio{
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #4adede93;
+    box-shadow: 0 0 40px 10px #f5008756; /*Sombra da seção de portfólio*/
 }
 
 section.portfolio .flex{
@@ -391,11 +403,11 @@ section.portfolio .flex{
 .img-port {
     width: 360px;
     height: 460px;
-    background-color: #4adedd; /*COLOCAR IMAGEM DO PROJETO*/
+    background-color: #F50087; /*COLOCAR IMAGEM DO PROJETO // COR DE FUNDO DOS CARDS DOS PROJETOS*/
     background-size: cover;
     background-position: 100% 0%;
-    transition: 8s;
-    border-radius: 40px;
+    transition: 4s;
+    border-radius: 60px;
     cursor:pointer;
     position: relative;
 }
@@ -405,7 +417,7 @@ section.portfolio .flex{
 }
 
 .img-port a{
-    color: #000;
+    color: #000; /*Cor do texto que tem no card*/
 }
 
 .overlay {
@@ -433,7 +445,7 @@ section.portfolio .flex{
 
 footer{
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #4adede70;
+    box-shadow: 0 0 40px 10px #490229;
 }
 
 footer .flex{
@@ -445,16 +457,16 @@ footer .line-footer{
 }
 
 .borda{
-    border-top: 4px solid #4adedd;
+    border-top: 4px solid #F50087; /*Cor da barrinha de divisão do rodapé*/
 }
 
 footer .line-footer p i{
-    color: #4adedd;
+    color: #F50087; /*Cor dos emojis do rodapé */
     font-size: 22px;
 }
 
 footer .line-footer p a{
-    color: #fff;
+    color: #Fff; /* Cor dos textinhos do rodapé*/
     text-decoration: none;
 }
 
@@ -469,7 +481,7 @@ footer img{
 
 
 #copyright {
-    background-color: #10172879;
+    background-color: #0f0f0f;
     color: #ffffff;
     text-align: center;
     padding: 24px;
@@ -483,10 +495,10 @@ footer img{
 }
 
 #copyright a:hover{
-    color: #4adedd;
+    color: #fff;
     text-decoration: none;
     transform: scale(1.07);
-    box-shadow: 0px 0px 8px #4adeddda;
+    box-shadow: 0px 0px 8px #F50087;
 }
 
 /* Yoinked from CodePen, but improved the animation
@@ -513,7 +525,7 @@ so that it is smooth among other more minor things */
     left: 0;
     width: 400%;
     height: 100%;
-    background: linear-gradient(115deg,#4adedd,#101728,#4adedd,#101728,#4adedd);
+    background: linear-gradient(115deg,#F50087,#000,#af0e67,#000,#490229);
     background-size: 25% 100%;
     animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop 1s linear infinite;
     animation-play-state: paused;
@@ -538,7 +550,6 @@ so that it is smooth among other more minor things */
     display: block;
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
-    background: #101728;
     border-radius: 3px;
     height: 100%;
 }
@@ -655,66 +666,4 @@ so that it is smooth among other more minor things */
     .btn-abrir-menu{
         display: block;
     }
-
-    /* OBRIGADO.HTML */
-    #main #title-main{
-        font-size: 25px;
-    }
-}
-
-/*OBRIGADO.HTML*/
-
-#main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #101728;
-    flex-direction: column;
-    font-family: 'Roboto Slab', serif;
-    padding: 80px 6%;
-}
-
-#title-main {
-    font-size: 45px;
-    color: #4adedd;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#paragrafo-main {
-    color: #4adedd;
-    margin-bottom: 50px;
-    text-align: justify;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#btn a{
-    text-decoration: none;
-    color: #101728;
-}
-
-#btn{
-    padding: 15px 55px;
-    background: rgb(74,222,221);
-    background: linear-gradient(90deg, rgba(74,222,221,1) 0%, rgba(74,222,221,1) 18%, rgba(255,255,255,1) 100%);
-    text-decoration: none;
-    color: #101728;
-    font-size: 18px;
-    transition: all 0.5s;
-    border-radius: 10px;
-    border: 0;
-    display: inline-block;
-}
-
-#btn:hover, #btn:focus{
-    border-radius: 30px;
-    color: #101728;
-    box-shadow: 0px 0px 8px #4adeddda;
-    cursor: pointer;
-    transform: scale(1.07);
 }
