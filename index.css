@@ -1,0 +1,725 @@
+/*ESTILO GERAL*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Share Tech Mono", monospace; */
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #101728;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+.logo img{
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: -40px;
+    margin-top: -20px;
+}
+
+/*ESTILHO CABEÇALHO*/
+
+header{
+    padding: 40px 4%;
+}
+
+header .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;  /* Foi necessário aplicar esse inline-block para que no hover o tranform funcione */
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #4adedd;
+    text-decoration: none;
+    transform: scale(1.07);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgb(74,222,221);
+    background: linear-gradient(90deg, rgba(74,222,221,1) 0%, rgba(74,222,221,1) 18%, rgba(255,255,255,1) 100%);
+    color: #101728;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover, form .btn-enviar input[type=submit]:hover{
+    box-shadow: 0px 0px 8px #4adeddda;
+    transform: scale(1.07);
+    transition: .2s;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #4adedd;
+}
+
+/* ESTILO MENU MOBILE */
+.btn-abrir-menu i {
+    color: #4adedd;
+    font-size: 40px;
+}
+
+
+.menu-mobile{
+    background-color: #101728;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display:block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #4adedd;
+    font-size: 30px;
+
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #4adedd;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #4adedd;
+    color: black;
+}
+
+.overlay-menu{
+    background-color: #00000085;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+    margin-bottom: 40px;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+    max-width: 500px;
+}
+
+.topo-do-site .txt-topo-do-site h1 span{
+    color: #4adedd;
+}
+
+.topo-do-site .txt-topo-do-site{
+    margin-right: auto;
+}
+
+.topo-do-site .txt-topo-do-site p{
+    color: #fff;
+    margin: 40px 0;
+    text-align: justify;
+    margin-right: 10rem;
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.topo-do-site .txt-topo-do-site p span{
+    color: #4adedd;
+}
+
+.topo-do-site .img-topo-do-site img{
+    position: relative;
+    margin-right: 150px;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+
+/* ESTILO DAS ESPECIALIDADES */
+
+.loader {
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .ball {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-1 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+  .ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+  }
+  
+  @keyframes bounce-2 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+  .ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+  }
+  
+  @keyframes bounce-3 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+section.especialidades {
+    padding: 80px 4%;;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+    text-align: center;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.07);
+    box-shadow: 0px 0px 15px #4adedd79;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #4adedd;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px ;
+}
+
+.especialidades .especialidades-box p{
+    text-align: justify;
+}
+
+
+/* ESTILO SOBRE */
+
+section.sobre{
+    padding: 80px 10%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre{
+    text-align: center;
+}
+
+.sobre .img-sobre img{
+    transition: .2s;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    position: relative;
+}
+
+.sobre .img-sobre img:hover{
+    transform: scale(1.07);
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    text-align: auto;
+}
+
+.sobre .txt-sobre #titulo-sobre{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #4adedd;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 40px 20px auto;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.sobre .txt-sobre p span{
+    color: #4adedd;
+}
+
+/*.sobre .txt-sobre*/ .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #4adedd;
+    color: #101728;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* ESTILO PORTFÓLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #4adede93;
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #4adedd; /*COLOCAR IMAGEM DO PROJETO*/
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    border-radius: 40px;
+    cursor:pointer;
+    position: relative;
+}
+
+.img-port:hover {   
+    background-position: 100% 100%;
+}
+
+.img-port a{
+    color: #000;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    transition: 1.5s;
+}
+
+.overlay:hover{
+    opacity: 0;
+}
+
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #4adede70;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 4px solid #4adedd;
+}
+
+footer .line-footer p i{
+    color: #4adedd;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+footer img{
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: -40px;
+    margin-top: -40px;
+}
+
+
+#copyright {
+    background-color: #10172879;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px;
+}
+
+#copyright a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+#copyright a:hover{
+    color: #4adedd;
+    text-decoration: none;
+    transform: scale(1.07);
+    box-shadow: 0px 0px 8px #4adeddda;
+}
+
+/* Yoinked from CodePen, but improved the animation
+so that it is smooth among other more minor things */
+
+.codepen-button {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+}
+  
+.codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg,#4adedd,#101728,#4adedd,#101728,#4adedd);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop 1s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+}
+  
+.codepen-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+}
+  
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+      transform: translateX(-25%);
+}
+}
+  
+.codepen-button span {
+    position: relative;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background: #101728;
+    border-radius: 3px;
+    height: 100%;
+}
+
+
+@media screen and (max-width:1020px){
+
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+
+
+    /* CABEÇALHO */
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+
+
+    /* TOPO DO SITE */
+    section.topo-do-site{
+        padding: 20px 8%;
+        margin-bottom: 40px;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-do-site img{
+        width: 100%;
+        margin: -120px auto -80px;
+    }
+
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    .topo-do-site .txt-topo-do-site p{
+        color: #fff;
+        margin: 40px 0;
+    }
+
+    .logo img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    /* ESTILO DAS ESPECIALIDADES */
+
+    section.especialidades {
+        padding: 40px 8%;;
+    }
+
+    /* SOBRE */
+
+    section.sobre{
+        padding: 40px 8%;
+    }
+
+    section.sobre .flex{
+        flex-direction: column-reverse;
+    }
+
+    .sobre .img-sobre img{
+        width: 100%;
+    }
+
+    .sobre .txt-sobre p{
+        margin: 40px auto;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    /* PORTFÓLIO */
+
+    section.portfolio {
+        padding: 40px 8%;
+    }
+
+    .img-port {
+        max-width: 360px;
+        width: 100%;
+        height: 460px;
+        margin: 5% auto;
+    }
+
+    /* FOOTER */
+
+    footer img{
+        max-width: 150px;
+        max-height: 150px;
+        margin-bottom: -10px;
+        margin-top: -40px;
+    }
+
+    .line-footer{
+        text-align: center;
+    }
+    
+    /* MENU MOBILE */
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    /* OBRIGADO.HTML */
+    #main #title-main{
+        font-size: 25px;
+    }
+}
+
+/*OBRIGADO.HTML*/
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #101728;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+    padding: 80px 6%;
+}
+
+#title-main {
+    font-size: 45px;
+    color: #4adedd;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#paragrafo-main {
+    color: #4adedd;
+    margin-bottom: 50px;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btn a{
+    text-decoration: none;
+    color: #101728;
+}
+
+#btn{
+    padding: 15px 55px;
+    background: rgb(74,222,221);
+    background: linear-gradient(90deg, rgba(74,222,221,1) 0%, rgba(74,222,221,1) 18%, rgba(255,255,255,1) 100%);
+    text-decoration: none;
+    color: #101728;
+    font-size: 18px;
+    transition: all 0.5s;
+    border-radius: 10px;
+    border: 0;
+    display: inline-block;
+}
+
+#btn:hover, #btn:focus{
+    border-radius: 30px;
+    color: #101728;
+    box-shadow: 0px 0px 8px #4adeddda;
+    cursor: pointer;
+    transform: scale(1.07);
+}
