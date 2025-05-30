@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: #101728;
+    background-color: #000;
     height: 100vh;
 }
 
@@ -44,14 +44,14 @@ header .interface{
 }
 
 header a {
-    color: #fff;
+    color: #fff; /* Cor dos links da navbar*/
     text-decoration: none;
     display: inline-block;  /* Foi necessário aplicar esse inline-block para que no hover o tranform funcione */
     transition: .2s;
 }
 
 header nav.menu-desktop a:hover {
-    color: #4adedd;
+    color: #F50087; /* Cor do Hover da Navbar */
     text-decoration: none;
     transform: scale(1.07);
 }
@@ -72,16 +72,10 @@ header nav.menu-desktop ul li{
     font-weight: 600;
     background: rgb(74,222,221);
     background: linear-gradient(90deg, rgba(74,222,221,1) 0%, rgba(74,222,221,1) 18%, rgba(255,255,255,1) 100%);
-    color: #101728;
+    color: #000;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-}
-
-button:hover, form .btn-enviar input[type=submit]:hover{
-    box-shadow: 0px 0px 8px #4adeddda;
-    transform: scale(1.07);
-    transition: .2s;
 }
 
 h2.titulo {
@@ -91,18 +85,19 @@ h2.titulo {
 }
 
 h2.titulo span{
-    color: #4adedd;
+    color: #F50087 /*Destaque dos títulos*/
 }
 
 /* ESTILO MENU MOBILE */
 .btn-abrir-menu i {
-    color: #4adedd;
+    color: #F50087; /*Emoji do estilo mobile*/
     font-size: 40px;
+    cursor: pointer;
 }
 
 
 .menu-mobile{
-    background-color: #101728;
+    background-color: #000; /*Cor de fundo do menu mobile*/
     height: 100vh;
     position: fixed;
     top: 0;
@@ -130,9 +125,9 @@ h2.titulo span{
 }
 
 .menu-mobile .btn-fechar i{
-    color: #4adedd;
+    color: #F50087; /* Cor do X do menu mobile*/
     font-size: 30px;
-
+    cursor: pointer;
 }
 
 .menu-mobile nav ul{
@@ -140,7 +135,7 @@ h2.titulo span{
 }
 
 .menu-mobile nav ul li a{
-    color: #4adedd;
+    color: #F50087; /* Cor do nome do menu mobile*/
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -148,7 +143,7 @@ h2.titulo span{
 }
 
 .menu-mobile nav ul li a:hover{
-    background-color: #4adedd;
+    background-color: #F50087;
     color: black;
 }
 
@@ -177,14 +172,14 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site h1{
-    color: #fff;
+    color: #fff; /*Cor da frase de impacto*/
     font-size: 42px;
     line-height: 40px;
     max-width: 500px;
 }
 
 .topo-do-site .txt-topo-do-site h1 span{
-    color: #4adedd;
+    color: #F50087;
 }
 
 .topo-do-site .txt-topo-do-site{
@@ -192,7 +187,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-do-site p{
-    color: #fff;
+    color: #fff; /* Descrição logo abaixo da frase de impacto*/
     margin: 40px 0;
     text-align: justify;
     margin-right: 10rem;
@@ -201,7 +196,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-do-site p span{
-    color: #4adedd;
+    color: #F50087; /* Destaque/span da descrição logo abaixo da frase de impacto*/
 }
 
 .topo-do-site .img-topo-do-site img{
@@ -283,7 +278,7 @@ section.especialidades .flex {
 }
 
 .especialidades .especialidades-box{
-    color: #fff;
+    color: #fff; /*Cor do texto em serviços*/
     padding: 40px;
     margin-top: 45px;
     border-radius: 20px;
@@ -293,12 +288,12 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box:hover{
     transform: scale(1.07);
-    box-shadow: 0px 0px 15px #4adedd79;
+    box-shadow: 0px 0px 15px #f50087; /*Box Shadow dos cards de serviços*/
 }
 
 .especialidades .especialidades-box i{
     font-size: 70px;
-    color: #4adedd;
+    color: #F50087; /*Cor dos emojis dos cards de serviços*/
 }
 
 .especialidades .especialidades-box h3{
@@ -337,7 +332,7 @@ section.sobre .flex{
 }
 
 .sobre .txt-sobre{
-    color: #fff;
+    color: #fff; /*Cor do texto do sobre nós*/
 }
 
 .sobre .txt-sobre h2{
@@ -355,7 +350,7 @@ section.sobre .flex{
 }
 
 .sobre .txt-sobre h2 span{
-    color: #4adedd;
+    color: #F50087; /*Span dos títulos da seção sobre nós*/
 }
 
 .sobre .txt-sobre p{
@@ -365,7 +360,7 @@ section.sobre .flex{
 }
 
 .sobre .txt-sobre p span{
-    color: #4adedd;
+    color: #F50087; /*Span da descrição e dos textos de sobre nós*/
 }
 
 /*.sobre .txt-sobre*/ .btn-social button{
