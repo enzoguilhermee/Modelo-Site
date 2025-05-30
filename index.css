@@ -426,7 +426,7 @@ section.portfolio .flex{
     height: 460px;
     background-color: #F50087; /*COLOCAR IMAGEM DO PROJETO // COR DE FUNDO DOS CARDS DOS PROJETOS*/
     background-size: cover;
-    background-position: 100% 0%;
+    background-position: center;   /* centraliza a imagem */
     transition: 4s;
     border-radius: 60px;
     cursor:pointer;
