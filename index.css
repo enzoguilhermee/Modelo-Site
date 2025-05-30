@@ -473,8 +473,8 @@ footer .line-footer p a{
 
 
 footer img{
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100px;
+    max-height: 100px;
     margin-bottom: -40px;
     margin-top: -40px;
 }
@@ -625,7 +625,7 @@ so that it is smooth among other more minor things */
     }
 
     .sobre .img-sobre img{
-        width: 100%;
+        width: 40%;
     }
 
     .sobre .txt-sobre p{
@@ -652,8 +652,8 @@ so that it is smooth among other more minor things */
     /* FOOTER */
 
     footer img{
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 100px;
+        max-height: 100px;
         margin-bottom: -10px;
         margin-top: -40px;
     }
