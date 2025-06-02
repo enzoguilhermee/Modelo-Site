@@ -34,7 +34,7 @@ body{
 /*ESTILHO CABEÇALHO*/
 
 header{
-    padding: 40px 4%;
+    padding: 20px 4%;
 }
 
 header .interface{
@@ -167,7 +167,7 @@ h2.titulo span{
 /* ESTILO DO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 200px 5%;
+    padding: 220px 5%;
     position: relative;
     background-image: url("assets/SofTeam\ Prêmio\ Geral4.jpg"); /* caminho da imagem */
     background-size: cover;        /* cobre toda a seção */
@@ -611,7 +611,7 @@ so that it is smooth among other more minor things */
 
     .topo-do-site .img-topo-do-site img{
         width: 100%;
-        margin: -120px auto -80px;
+        margin: -120px auto -65px;
     }
 
 
@@ -646,7 +646,7 @@ so that it is smooth among other more minor things */
     }
 
     .sobre .img-sobre img{
-        width: 40%;
+        width: 50%;
     }
 
     .sobre .txt-sobre p{
