@@ -35,6 +35,7 @@ body{
 
 header{
     padding: 20px 4%;
+    box-shadow: 0 0 20px 5px #f500c056; 
 }
 
 header .interface{
@@ -64,6 +65,7 @@ header nav ul{
 header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
+    
 }
 
 .btn-contato button{
